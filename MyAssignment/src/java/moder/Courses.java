@@ -16,7 +16,7 @@ public class Courses {
     private Lecturers lecturer;
     private Subjects subject;
     private Semester semester;
-    private ArrayList<Student> students = new ArrayList<>();
+    private ArrayList<Students> students = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -34,19 +34,19 @@ public class Courses {
         this.name = name;
     }
 
-    public Lecturer getLecturer() {
+    public Lecturers getLecturer() {
         return lecturer;
     }
 
-    public void setLecturer(Lecturer lecturer) {
+    public void setLecturer(Lecturers lecturer) {
         this.lecturer = lecturer;
     }
 
-    public Subject getSubject() {
+    public Subjects getSubject() {
         return subject;
     }
 
-    public void setSubject(Subject subject) {
+    public void setSubject(Subjects subject) {
         this.subject = subject;
     }
 
@@ -58,11 +58,11 @@ public class Courses {
         this.semester = semester;
     }
 
-    public ArrayList<Student> getStudents() {
+    public ArrayList<Students> getStudents() {
         return students;
     }
 
-    public void setStudents(ArrayList<Student> students) {
+    public void setStudents(ArrayList<Students> students) {
         this.students = students;
     }
     

@@ -6,7 +6,7 @@ public class Assesments {
     private int id;
     private String name;
     private float weight;
-    private Subject subject;
+    private Subjects subject;
 
     public int getId() {
         return id;
@@ -32,11 +32,11 @@ public class Assesments {
         this.weight = weight;
     }
 
-    public Subject getSubject() {
+    public Subjects getSubject() {
         return subject;
     }
 
-    public void setSubject(Subject subject) {
+    public void setSubject(Subjects subject) {
         this.subject = subject;
     }
     
