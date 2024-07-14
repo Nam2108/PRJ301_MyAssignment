@@ -15,13 +15,11 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
-import model.Lecturer;
-import model.User;
+import moder.Lecturers;
+import moder.Users;
 
-/**
- *
- * @author sonnt-local
- */
+
+
 public class RequiredLecturerCheckingFilter implements Filter {
     
     private static final boolean debug = true;
@@ -120,12 +118,12 @@ public class RequiredLecturerCheckingFilter implements Filter {
     
     private boolean isAuthenticated(HttpServletRequest request)
     {
-        User user = (User)request.getSession().getAttribute("user");
+        Users user = (Users)request.getSession().getAttribute("user");
         if(user ==null)
             return false;
         else
         {
-            Lecturer lecturer = user.getLecturer();
+            Lecturers lecturer = user.getLecturer();
             return lecturer != null;
         }
     }

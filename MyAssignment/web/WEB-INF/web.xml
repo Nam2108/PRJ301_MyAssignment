@@ -4,8 +4,16 @@
         <servlet-name>LoginController</servlet-name>
         <servlet-class>controller.auth.LoginController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>logoutController</servlet-name>
+        <servlet-class>controller.auth.logoutController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logoutController</servlet-name>
+        <url-pattern>/logout</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -15,6 +15,15 @@ public class Students {
     private String name;
     private ArrayList<Courses> courses = new ArrayList<>();
 
+    public Students() {
+    }
+
+    public Students(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    
+
     public int getId() {
         return id;
     }

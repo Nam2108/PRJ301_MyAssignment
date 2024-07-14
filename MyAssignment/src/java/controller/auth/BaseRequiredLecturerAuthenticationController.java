@@ -18,7 +18,7 @@ import org.apache.catalina.User;
 
 /**
  *
- * @author sonnt-local
+ * @author nam-local
  */
 public abstract class BaseRequiredLecturerAuthenticationController extends HttpServlet {
    
