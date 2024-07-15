@@ -8,6 +8,14 @@
         <servlet-name>logoutController</servlet-name>
         <servlet-class>controller.auth.logoutController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HomeLecturerController</servlet-name>
+        <servlet-class>controller.lecturer.HomeLecturerController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MarkReportController</servlet-name>
+        <servlet-class>controller.lecturer.MarkReportController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -15,5 +23,13 @@
     <servlet-mapping>
         <servlet-name>logoutController</servlet-name>
         <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomeLecturerController</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MarkReportController</servlet-name>
+        <url-pattern>/mark</url-pattern>
     </servlet-mapping>
 </web-app>
