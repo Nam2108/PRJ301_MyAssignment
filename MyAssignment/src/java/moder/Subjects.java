@@ -13,8 +13,6 @@ import java.util.ArrayList;
 public class Subjects {
     private int id;
     private String name;
-    private ArrayList<Courses> courses = new ArrayList<>();
-    private ArrayList<Assesments> assessments = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -31,22 +29,4 @@ public class Subjects {
     public void setName(String name) {
         this.name = name;
     }
-
-    public ArrayList<Courses> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(ArrayList<Courses> courses) {
-        this.courses = courses;
-    }
-
-    public ArrayList<Assesments> getAssessments() {
-        return assessments;
-    }
-
-    public void setAssessments(ArrayList<Assesments> assessments) {
-        this.assessments = assessments;
-    }
-
-    
 }

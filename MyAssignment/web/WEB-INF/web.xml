@@ -16,6 +16,18 @@
         <servlet-name>MarkReportController</servlet-name>
         <servlet-class>controller.lecturer.MarkReportController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AccountDBContext</servlet-name>
+        <servlet-class>dal.AccountDBContext</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ScoreDBContext</servlet-name>
+        <servlet-class>dal.ScoreDBContext</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GroupDBContext</servlet-name>
+        <servlet-class>dal.GroupDBContext</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -31,5 +43,17 @@
     <servlet-mapping>
         <servlet-name>MarkReportController</servlet-name>
         <url-pattern>/mark</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AccountDBContext</servlet-name>
+        <url-pattern>/account</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ScoreDBContext</servlet-name>
+        <url-pattern>/score</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GroupDBContext</servlet-name>
+        <url-pattern>/group</url-pattern>
     </servlet-mapping>
 </web-app>

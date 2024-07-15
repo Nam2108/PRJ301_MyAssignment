@@ -8,12 +8,10 @@ package moder;
  *
  * @author nam
  */
-public class Users {
-     private String username;
+public class Account {
+    private String username;
     private String password;
     private String displayname;
-    private Lecturers lecturer;
-    private Students student;
 
     public String getUsername() {
         return username;
@@ -38,22 +36,4 @@ public class Users {
     public void setDisplayname(String displayname) {
         this.displayname = displayname;
     }
-
-    public Lecturers getLecturer() {
-        return lecturer;
-    }
-
-    public void setLecturer(Lecturers lecturer) {
-        this.lecturer = lecturer;
-    }
-
-    public Students getStudent() {
-        return student;
-    }
-
-    public void setStudent(Students student) {
-        this.student = student;
-    }
-
-    
 }

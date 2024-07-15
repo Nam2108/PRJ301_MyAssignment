@@ -4,7 +4,6 @@
  */
 package moder;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -13,15 +12,6 @@ import java.util.ArrayList;
 public class Lecturers {
     private int id;
     private String name;
-    private ArrayList<Courses> courses = new ArrayList<>();
-
-    public Lecturers() {
-    }
-
-    public Lecturers(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
 
     public int getId() {
         return id;
@@ -37,14 +27,6 @@ public class Lecturers {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public ArrayList<Courses> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(ArrayList<Courses> courses) {
-        this.courses = courses;
     }
     
 }
