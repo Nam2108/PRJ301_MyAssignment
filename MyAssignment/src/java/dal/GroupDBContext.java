@@ -18,15 +18,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import moder.Attendence;
+import moder.Lecturers;
+import moder.Lession;
+import moder.Room;
+import moder.Students;
+import moder.StudentsGroup;
+import moder.Subjects;
 
 /**
  *
  * @author nam
  */
-public class GroupDBContext extends DBContext<Student> {
+public class GroupDBContext extends DBContext<Students> {
 
-    public List<StudentGroup> getStudentGroupByLecturerId(int lname) {
-        List<StudentGroup> group = new ArrayList<>();
+    public List<StudentsGroup> getStudentGroupByLecturerId(int lname) {
+        List<StudentsGroup> group = new ArrayList<>();
         try {
             String sql = "select sg.gid, sg.gname, su.subid, su.suname from StudentGroup sg\n"
                     + "inner join Subject su on sg.subid = su.subid\n"
@@ -35,8 +42,8 @@ public class GroupDBContext extends DBContext<Student> {
             stm.setInt(1, lname);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
-                Subject su = new Subject();
-                StudentGroup sg = new StudentGroup();
+                Subjects su = new Subjects();
+                StudentsGroup sg = new StudentsGroup();
                 su.setId(rs.getInt("subid"));
                 su.setName(rs.getString("suname"));
                 sg.setSubject(su);
@@ -51,10 +58,10 @@ public class GroupDBContext extends DBContext<Student> {
         return group;
     }
 
-    public ArrayList<Student> getAllStudentByGroupId(int lname) {
-        ArrayList<Student> students = new ArrayList<>();
+    public ArrayList<Students> getAllStudentByGroupId(int lname) {
+        ArrayList<Students> students = new ArrayList<>();
         try {
-            String sql = "select s.sid, s.sname, s.email from Student s\n"
+            String sql = "select s.sid, s.sname from Student s\n"
                     + "join Enrollment e on s.sid = e.sid\n"
                     + "join StudentGroup sg on sg.gid = e.gid\n"
                     + "where sg.gid = ?";
@@ -62,10 +69,9 @@ public class GroupDBContext extends DBContext<Student> {
             stm.setInt(1, lname);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
-                Student student = new Student();
+                Students student = new Students();
                 student.setId(rs.getInt("sid"));
                 student.setName(rs.getString("sname"));
-                student.setEmail(rs.getString("email"));
                 students.add(student);
             }
 
@@ -91,10 +97,10 @@ public class GroupDBContext extends DBContext<Student> {
                 Room r = new Room();
                 r.setId(rs.getInt("rid"));
                 r.setName(rs.getString("rname"));
-                Lecturer lec = new Lecturer();
+                Lecturers lec = new Lecturers();
                 lec.setId(rs.getInt("lid"));
                 lec.setName(rs.getString("lname"));
-                StudentGroup sg = new StudentGroup();
+                StudentsGroup sg = new StudentsGroup();
                 sg.setId(rs.getInt("gid"));
                 sg.setName(rs.getString("gname"));
                 Lession l = new Lession();
@@ -156,7 +162,7 @@ public class GroupDBContext extends DBContext<Student> {
             stm.setInt(1, student);
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
-                Students s = new Student();
+                Students s = new Students();
                 s.setId(rs.getInt("sid"));
                 s.setName(rs.getString("sname"));
                 Lession l = new Lession();
@@ -179,7 +185,7 @@ public class GroupDBContext extends DBContext<Student> {
     }
 
     public Lecturers getLecturerByUsername(String username) {
-        Lecturers lecturer = new Lecturer();
+        Lecturers lecturer = new Lecturers();
         try {
             String sql = "select * from Lecturer where lname = ?";
             PreparedStatement stm = connection.prepareStatement(sql);

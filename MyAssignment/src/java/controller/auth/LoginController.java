@@ -6,7 +6,8 @@
 package controller.auth;
 
 import dal.AccountDBContext;
-import dal.StudentDBContext;
+
+import dal.StudentsDBContext;
 import entity.Account;
 import entity.Lecturer;
 import entity.Student;
@@ -18,6 +19,9 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import moder.Account;
+import moder.Lecturers;
+import moder.Students;
 
 /**
  *
@@ -53,8 +57,8 @@ public class LoginController extends HttpServlet {
             //login success
             HttpSession session = request.getSession();
             StudentsDBContext sdb = new StudentsDBContext();
-            Students student = sdb.getStudentByUsername(username);// lấy thông tin sinh viên qua username
-            Lecturers lecturer = sdb.getLecturerByUsername(username);
+            Students student = sdb.getStudentsByUsername(username);// lấy thông tin sinh viên qua username
+            Lecturers lecturer = sdb.getLecturersByUsername(username);
             String remember = request.getParameter("remember");
             if (remember != null) {
                 Cookie c_user = new Cookie("username", username);

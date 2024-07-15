@@ -5,12 +5,17 @@
 
 package controller.lecturer;
 
+import dal.GroupDBContext;
+import dal.ScoreDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -18,64 +23,69 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 public class MarkReportController extends HttpServlet {
    
-    /** 
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet MarkReportController</title>");  
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet MarkReportController at " + request.getContextPath () + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+    GroupDBContext db = new GroupDBContext();
+        ScoreDBContext sdb = new ScoreDBContext();
+        int groupchoosen = Integer.parseInt(req.getParameter("groupchoosen"));
+        int subjectchoosen = Integer.parseInt(req.getParameter("subjectchoosen"));
+        List<Students> listStudent = db.getAllStudentByGroupId(groupchoosen);
+        List<ScoreType> listScoreType = sdb.getScoreTypeBySubjectId(subjectchoosen);
+        List<Score> listScore = new ArrayList<>();
+        for (Students student : listStudent) {
+            for (ScoreType scoreType : listScoreType) {
+                double score = Double.parseDouble(req.getParameter("score" + student.getId() + "and" + scoreType.getSctid()));
+                Score scoreObj = new Score();
+                scoreObj.setScore(score);
+                scoreObj.setStudent(student);
+                scoreObj.setScoreType(scoreType);
+                listScore.add(scoreObj);
+//                PrintWriter out = resp.getWriter();
+//                out.print(student.getName() + " " + scoreType.getSctname() + " " + scoreObj.getScore() + "\n");
+            }
         }
-    } 
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /** 
-     * Handles the HTTP <code>GET</code> method.
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-        processRequest(request, response);
-    } 
+        int flag = 0;
+        List<Score> score1st = sdb.getAllScoreByGroupIdAndSubjectId(groupchoosen, subjectchoosen);
+        if (score1st.size() < listScore.size()) {
+            req.setAttribute("messageAlert", "Save successfully!");
+        } else {
+            for (int i = 0; i < listScore.size(); i++) {
+                if (score1st.get(i).getScore() != listScore.get(i).getScore()) {
+                    flag = 1;
+                }
+            }
+            if(flag == 1){
+                req.setAttribute("messageAlert", "Save successfully!");
+            }
+        }
 
-    /** 
-     * Handles the HTTP <code>POST</code> method.
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-        processRequest(request, response);
+        sdb.UpdateScoreByGroupIdAndSubjetId(listScore, groupchoosen, subjectchoosen);
+        req.setAttribute("groupchoosen", groupchoosen);
+        req.setAttribute("subjectchoosen", subjectchoosen);
+//        req.setAttribute("messageAlert", "Save successfully!");
+        doGet(req, resp, account, roles);
+
     }
 
-    /** 
-     * Returns a short description of the servlet.
-     * @return a String containing servlet description
-     */
     @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp, Account account, ArrayList<Role> roles) throws ServletException, IOException {
+        GroupDBContext db = new GroupDBContext();
+        ScoreDBContext sdb = new ScoreDBContext();
+        HttpSession session = req.getSession();
+        //in ra lowps theo lecturer id
+        Lecturer lecturer = (Lecturer) session.getAttribute("lecturer");
+        List<StudentGroup> studentgroup = db.getStudentGroupByLecturerId(lecturer.getId());
+        if (req.getParameter("groupchoosen") != null) {
+            int groupchoosen = Integer.parseInt(req.getParameter("groupchoosen"));//id lop
+            req.setAttribute("listStudent", db.getAllStudentByGroupId(groupchoosen));
+            int subjectchoosen = Integer.parseInt(req.getParameter("subjectchoosen"));//id mon hoc
+            req.setAttribute("listScoreType", sdb.getScoreTypeBySubjectId(subjectchoosen));
+            ScoreDBContext scdb = new ScoreDBContext();
+            req.setAttribute("listScore", scdb.getAllScoreByGroupIdAndSubjectId(groupchoosen, subjectchoosen));
+            req.setAttribute("groupchoosen", groupchoosen);
+            req.setAttribute("subjectchoosen", subjectchoosen);
+        }
+        req.setAttribute("studentgroup", studentgroup);
+        req.getRequestDispatcher("../view/lecturer/markreport.jsp").forward(req, resp);
 
+    }
 }
