@@ -65,8 +65,4 @@ public class Attendence {
     public void setTime(Date time) {
         this.time = time;
     }
-
-    public void setId(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

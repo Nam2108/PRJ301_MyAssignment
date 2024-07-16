@@ -4,7 +4,7 @@
  */
 package moder;
 
-import java.sql.Date;
+import java.sql.*;
 import java.util.ArrayList;
 
 /**
@@ -16,7 +16,7 @@ public class Lession {
     private Date date;
     private boolean attended;
     private StudentsGroup group;
-    private TimeSlot slot;
+    private TimeSlost slot;
     private Room room;
     private Lecturers lecturer;
     private ArrayList<Attendence> atts = new ArrayList<>();
@@ -45,19 +45,19 @@ public class Lession {
         this.attended = attended;
     }
 
-    public StudentGroup getGroup() {
+    public StudentsGroup getGroup() {
         return group;
     }
 
-    public void setGroup(StudentGroup group) {
+    public void setGroup(StudentsGroup group) {
         this.group = group;
     }
 
-    public TimeSlot getSlot() {
+    public TimeSlost getSlot() {
         return slot;
     }
 
-    public void setSlot(TimeSlot slot) {
+    public void setSlot(TimeSlost slot) {
         this.slot = slot;
     }
 
@@ -69,11 +69,11 @@ public class Lession {
         this.room = room;
     }
 
-    public Lecturer getLecturer() {
+    public Lecturers getLecturer() {
         return lecturer;
     }
 
-    public void setLecturer(Lecturer lecturer) {
+    public void setLecturer(Lecturers lecturer) {
         this.lecturer = lecturer;
     }
 
@@ -83,9 +83,5 @@ public class Lession {
 
     public void setAtts(ArrayList<Attendence> atts) {
         this.atts = atts;
-    }
-
-    public void setGroup(StudentsGroup sg) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

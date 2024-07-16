@@ -8,9 +8,6 @@ package controller.auth;
 import dal.AccountDBContext;
 
 import dal.StudentsDBContext;
-import entity.Account;
-import entity.Lecturer;
-import entity.Student;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
