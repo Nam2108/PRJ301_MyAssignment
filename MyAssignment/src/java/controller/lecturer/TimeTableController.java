@@ -4,14 +4,13 @@
  */
 package controller.lecturer;
 
-import controller.authentication.BaseRequiredAuthenticationController;
 import controller.authentication.authorization.BaseRBACController;
 import dal.LessionDBContext;
 import dal.TimeSlotDBContext;
 import moder.Account;
 import moder.Lession;
 import moder.Role;
-import moder.TimeSlot;
+import moder.TimeSlost;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -66,7 +65,7 @@ public class TimeTableController extends BaseRBACController {
                 DateTimeHelper.convertSqlDateToUtilDate(to));
         
         TimeSlotDBContext slotDB = new TimeSlotDBContext();
-        ArrayList<TimeSlot> slots = slotDB.list();
+        ArrayList<TimeSlost> slots = slotDB.list();
         
         LessionDBContext lessDB = new LessionDBContext();
         ArrayList<Lession> lessions = lessDB.getBy(lid, from, to);
