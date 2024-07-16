@@ -9,7 +9,7 @@ import controller.authentication.authorization.BaseRBACController;
 import dal.GroupDBContext;
 import dal.LessionDBContext;
 import dal.ScoreDBContext;
-import dal.TimeSlostDBContext;
+import dal.TimeSlotDBContext;
 import moder.Account;
 import moder.Lecturers;
 import moder.Lession;
