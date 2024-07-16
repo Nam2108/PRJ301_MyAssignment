@@ -32,6 +32,14 @@
         <servlet-name>RoleDBContext</servlet-name>
         <servlet-class>dal.RoleDBContext</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LessionDBContext</servlet-name>
+        <servlet-class>dal.LessionDBContext</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TimeSlostDBContext</servlet-name>
+        <servlet-class>dal.TimeSlostDBContext</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -63,5 +71,13 @@
     <servlet-mapping>
         <servlet-name>RoleDBContext</servlet-name>
         <url-pattern>/role</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LessionDBContext</servlet-name>
+        <url-pattern>/lession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TimeSlostDBContext</servlet-name>
+        <url-pattern>/timeslost</url-pattern>
     </servlet-mapping>
 </web-app>

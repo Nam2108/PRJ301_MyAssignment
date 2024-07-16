@@ -4,15 +4,16 @@
  */
 package controller.authentication.authorization;
 
-import controller.authentication.BaseRequiredAuthenticationController;
+import controller.auth.BaseRequiredAuthenticationController;
 import dal.RoleDBContext;
-import entity.Account;
-import entity.Role;
+import moder.Account;
+import moder.Role;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+
 
 public abstract class BaseRBACController extends BaseRequiredAuthenticationController {
 

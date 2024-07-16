@@ -5,8 +5,20 @@
 
 package controller.lecturer;
 
+import controller.authentication.authorization.BaseRBACController;
 import dal.GroupDBContext;
+import dal.LessionDBContext;
 import dal.ScoreDBContext;
+import dal.TimeSlostDBContext;
+import moder.Account;
+import moder.Lecturers;
+import moder.Lession;
+import moder.Role;
+import moder.Score;
+import moder.ScoreType;
+import moder.Students;
+import moder.StudentsGroup;
+import moder.TimeSlost;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -15,15 +27,19 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-
+import util.DateTimeHelper;
 /**
  *
  * @author nam
  */
-public class MarkReportController extends HttpServlet {
-   
-    GroupDBContext db = new GroupDBContext();
+public class MarkReportController extends BaseRBACController {
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp, Account account, ArrayList<Role> roles) throws ServletException, IOException {
+
+        GroupDBContext db = new GroupDBContext();
         ScoreDBContext sdb = new ScoreDBContext();
         int groupchoosen = Integer.parseInt(req.getParameter("groupchoosen"));
         int subjectchoosen = Integer.parseInt(req.getParameter("subjectchoosen"));
@@ -72,8 +88,8 @@ public class MarkReportController extends HttpServlet {
         ScoreDBContext sdb = new ScoreDBContext();
         HttpSession session = req.getSession();
         //in ra lowps theo lecturer id
-        Lecturer lecturer = (Lecturer) session.getAttribute("lecturer");
-        List<StudentGroup> studentgroup = db.getStudentGroupByLecturerId(lecturer.getId());
+        Lecturers lecturer = (Lecturers) session.getAttribute("lecturer");
+        List<StudentsGroup> studentgroup = db.getStudentGroupByLecturerId(lecturer.getId());
         if (req.getParameter("groupchoosen") != null) {
             int groupchoosen = Integer.parseInt(req.getParameter("groupchoosen"));//id lop
             req.setAttribute("listStudent", db.getAllStudentByGroupId(groupchoosen));
