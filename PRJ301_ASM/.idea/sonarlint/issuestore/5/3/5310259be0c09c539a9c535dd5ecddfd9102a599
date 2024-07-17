@@ -1,0 +1,7 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Å‡Œ¢ùÿÿÿÿJ$c0226d1e-64cf-435f-975b-3a24ed1ab76e
+Ê
+java:S1130!"Remove the declaration of thrown exception 'jakarta.mail.internet.AddressException' which is a subclass of 'jakarta.mail.MessagingException'.(‡Â´»J$a8f708a8-bc80-496e-8c75-928bc815a0f3
+f	java:S106:"+Replace this use of System.out by a logger.(™ÑËŞJ$938989db-089b-450e-94cf-bd9194c13fda
+Z
+java:S1128"Remove this duplicated import.(ÊÒ£–J$5c7bc3f1-8948-4e46-9017-1b3198fcf909

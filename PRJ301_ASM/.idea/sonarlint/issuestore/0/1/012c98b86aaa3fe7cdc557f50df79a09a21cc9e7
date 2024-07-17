@@ -1,0 +1,55 @@
+
+‡
+java:S1192t"KDefine a constant instead of duplicating this literal "isAttended" 3 times.(ñƒ–üJ$93550f21-c554-4691-927a-448e9179d71a
+
+java:S1192¹"SDefine a constant instead of duplicating this literal "Not supported yet." 5 times.(®±Â™J$c0b17075-9958-447b-9629-77b723125707
+‹
+java:S1192+"ODefine a constant instead of duplicating this literal "           ,?
+" 3 times.(ä«‰÷J$93670948-8cb6-489d-be72-e57d266cff3f
+†
+java:S1192€"IDefine a constant instead of duplicating this literal "SELECT 
+" 3 times.(¡üí˜J$6179a733-f8b0-4f98-8201-6efc8243c251
+Œ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÀÇ«J$54369860-e8a9-4ecb-adc1-1c7cc5061779
+Œ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß–ÅØJ$0ac4bcc9-e72d-4876-adc9-b04dac67b82e
+‹	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®›ÓEJ$51c32446-3a4a-4b7a-9ffd-2a9f5193b947
+‘	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÓĞúÿÿÿÿJ$2f0ce433-cbf8-4f04-85b3-8185b66147c5
+Œ	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ã¼‘J$2bb7df3b-d0c7-4978-a0da-08d9503b7d6c
+Œ	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÿöJ$7705be8a-57e3-4291-b344-413d8928e74d
+‘	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ó¢€ÿÿÿÿÿJ$00c8469d-9bbc-4753-a688-65a53fbbbb3e
+‘	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÓĞúÿÿÿÿJ$a7d4a656-446c-4c7e-b6ed-afc8c791c03c
+Œ	java:S117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ã¼‘J$d96a5458-8598-4484-9b95-636944eacee1
+Œ	java:S117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÿöJ$cb010a53-c063-4ead-834d-c47cd3863e90
+}
+java:S69090"<Move this loop-invariant setter invocation out of this loop.(ê…ğÒüÿÿÿÿJ$3b1413d0-4bf4-4aa3-a91c-d0dcc9420b1e
+m
+java:S6126#"2Replace this String concatenation with Text block.(®›ÓEJ$783c4fdb-33e8-4996-b389-196317bb92c6
+o
+java:S6126€"2Replace this String concatenation with Text block.(¡üí˜J$3c4961a5-1a51-43bc-a740-72d2cab95af6
+|
+java:S2479ƒ":Remove the non-escaped \u0009 character from this literal.(²î‹ıÿÿÿÿJ$1d592772-aa7c-41e7-8c80-ed30f5942bf7
+|
+java:S2479„":Remove the non-escaped \u0009 character from this literal.(á•‚‰ùÿÿÿÿJ$c2a083e0-6bee-4487-864c-c725ec71ccc8
+o
+java:S6126˜"2Replace this String concatenation with Text block.(¡üí˜J$afa1bcb0-e473-45e8-9656-b871fb3788e0
+|
+java:S2479œ":Remove the non-escaped \u0009 character from this literal.(²î‹ıÿÿÿÿJ$7ef65b2a-ac66-4091-b8d2-95033a434848
+|
+java:S2479":Remove the non-escaped \u0009 character from this literal.(á•‚‰ùÿÿÿÿJ$11e88df2-86f7-4f2c-a783-ef505990670c
+|
+java:S2479":Remove the non-escaped \u0009 character from this literal.(‡ø•üÿÿÿÿJ$3f769177-cdde-434c-b636-7a14f3d5dd87
+o
+java:S6126À"2Replace this String concatenation with Text block.(¡üí˜J$c2808639-ed20-446c-bcc9-da41cbebdd2f
+|
+java:S2479Ç":Remove the non-escaped \u0009 character from this literal.(°Û–ûüÿÿÿÿJ$10cbc16f-8a46-4c00-a2f6-45f42f4ba3e6
+w
+java:S2479È":Remove the non-escaped \u0009 character from this literal.(„ÙÈåJ$1bcc16c3-7f05-47d3-8510-76479e733607
+|
+java:S2479É":Remove the non-escaped \u0009 character from this literal.(³Í‚¬øÿÿÿÿJ$b4f84a9e-8744-4b5e-9d65-17ccf643204a
+w
+java:S2479Ê":Remove the non-escaped \u0009 character from this literal.(´ş‡ºJ$6b6d9d33-ce21-4439-812f-1d7c56439992
+o
+java:S6126ı"2Replace this String concatenation with Text block.(¡üí˜J$bc722149-c80b-45c2-a814-b8a167f57d82
+—
+java:S6912W"VUse "addBatch" and "executeBatch" to execute multiple SQL statements in a single call.(±£œßûÿÿÿÿJ$a0d5dd7d-fd00-4224-907a-4fbaf2949d73
+—
+java:S69124"VUse "addBatch" and "executeBatch" to execute multiple SQL statements in a single call.(±£œßûÿÿÿÿJ$ad30770c-1b65-4ddc-bf5e-55a71ab15a51

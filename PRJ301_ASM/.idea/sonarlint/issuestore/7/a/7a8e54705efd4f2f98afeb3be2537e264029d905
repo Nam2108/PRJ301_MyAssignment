@@ -1,0 +1,13 @@
+
+
+java:S11921"SDefine a constant instead of duplicating this literal "Not supported yet." 5 times.(®±Â™J$2a297078-9b0a-4609-a492-ddceb4ea9222
+n
+java:S6126"2Replace this String concatenation with Text block.(¥¯ÚíJ$a05a413b-85fb-47cc-a532-4b8533ec3fa2
+v
+java:S2479":Remove the non-escaped \u0009 character from this literal.(‘¬€ğJ$6b28ef02-d9fd-4347-8b14-9c8d70c2f8f8
+{
+java:S2479":Remove the non-escaped \u0009 character from this literal.(¡šÑŠúÿÿÿÿJ$609dc5a2-0dd6-4c87-b49f-ce088f19a7e0
+v
+java:S2479":Remove the non-escaped \u0009 character from this literal.(œ¿“ÅJ$a1041c78-b26c-40c0-81cf-d33615948c7a
+v
+java:S2479":Remove the non-escaped \u0009 character from this literal.(“®Œ¢J$429e6870-77a4-43f1-8ee6-1ae8cd3d3c55

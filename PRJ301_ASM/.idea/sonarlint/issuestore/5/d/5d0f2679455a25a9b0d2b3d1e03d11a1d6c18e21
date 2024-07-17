@@ -1,0 +1,15 @@
+
+
+java:S1192v"SDefine a constant instead of duplicating this literal "Not supported yet." 5 times.(®±Â™J$09621d49-f326-4709-ad51-5bfd6eccc83b
+Œ	java:S117\"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¹èÀJ$01ca1c4b-5759-4c6b-8c2e-b1e0b30ca300
+‘	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Úð£±ÿÿÿÿÿJ$f1f70d8f-9dc8-4478-8b6a-9e4ef49439f3
+‘	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ýã®ÅûÿÿÿÿJ$c83af456-688b-4f1f-8e7a-627d14df40ee
+‘	java:S117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÓÐúÿÿÿÿJ$15f01d17-61c0-4193-ac1c-f7468d2bb483
+s
+java:S6126#"2Replace this String concatenation with Text block.(±ÁÑ²üÿÿÿÿJ$2d0704da-f5fb-4943-b6b9-9580151abfe2
+n
+java:S6126>"2Replace this String concatenation with Text block.(ÜÝ±…J$3e523bf3-aa15-4977-9a6c-70a24bf08d75
+n
+java:S6126\"2Replace this String concatenation with Text block.(–¹èÀJ$477b6aaf-319f-4e68-b178-cec40365ebba
+—
+java:S6912l"VUse "addBatch" and "executeBatch" to execute multiple SQL statements in a single call.(±£œßûÿÿÿÿJ$6772c68e-7752-42b4-b409-849a8a1b4fbc

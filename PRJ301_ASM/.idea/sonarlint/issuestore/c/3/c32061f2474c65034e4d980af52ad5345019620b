@@ -1,0 +1,11 @@
+
+¸
+java:S1319 "pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(æœÅ¬ÿÿÿÿÿ8£æğâø1J$06cf2d62-6f9a-41f1-9d71-a50de08dd301
+
+java:S5993"9Change the visibility of this constructor to "protected".(Ø€¥¶ùÿÿÿÿ8¯æğâø1J$b3f9ec19-9ae8-42ba-ba61-e106a0e8e3de
+‡
+java:S2147"DCombine this catch with the one at line 25, which has the same body.(À‹ø„8“±Èæø1J$9b3ee241-8cc9-4b74-8e81-c8c7d8516f9b
+u
+java:S4925"-Remove this "Class.forName()", it is useless.(ìè©‡úÿÿÿÿ8¢±Èæø1J$96ae226a-b6e1-46e0-96a4-6e0717ff1514
+~
+java:S6437"6Revoke and change this password, as it is compromised.(ÊÁ¢êüÿÿÿÿ8¢±Èæø1J$1b58809b-5ae9-4e0d-99d4-c251cf947c56
