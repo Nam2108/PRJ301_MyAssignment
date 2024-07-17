@@ -6,7 +6,7 @@ package entity;
 
 /**
  *
- * @author sonnt
+ * @author nam
  */
 public class Room {
     private int id;

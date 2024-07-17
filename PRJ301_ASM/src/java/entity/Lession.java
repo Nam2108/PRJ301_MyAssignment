@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author sonnt
+ * @author nam
  */
 public class Lession {
     private int id;

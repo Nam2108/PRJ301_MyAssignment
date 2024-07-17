@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author DEll
+ * @author nam
  */
 public class StudentDBContext extends DBContext<Student> {
 

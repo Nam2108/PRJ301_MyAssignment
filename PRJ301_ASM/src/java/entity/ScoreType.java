@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author DEll
+ * @author nam
  */
 public class ScoreType {
     private int sctid;

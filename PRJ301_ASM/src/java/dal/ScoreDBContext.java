@@ -25,7 +25,7 @@ import org.apache.jasper.tagplugins.jstl.core.ForEach;
 
 /**
  *
- * @author DEll
+ * @author nam
  */
 public class ScoreDBContext extends DBContext<Student> {
 

@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author DEll
+ * @author nam
  */
 public class RoleDBContext extends DBContext<Role> {
 

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author DEll
+ * @author nam
  */
 public class AttendanceTakingController extends BaseRBACController {
 

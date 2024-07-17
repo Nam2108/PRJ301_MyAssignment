@@ -6,7 +6,7 @@ package entity;
 
 /**
  *
- * @author sonnt
+ * @author nam
  */
 public class TimeSlot {
     private int id;

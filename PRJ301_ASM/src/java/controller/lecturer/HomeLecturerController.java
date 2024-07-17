@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author DEll
+ * @author nam
  */
 public class HomeLecturerController extends HttpServlet {
    

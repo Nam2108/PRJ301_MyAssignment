@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  *
- * @author sonnt
+ * @author nam
  */
 public class Attendence {
     private int id;

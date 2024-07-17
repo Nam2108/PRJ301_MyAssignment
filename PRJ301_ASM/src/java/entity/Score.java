@@ -6,7 +6,7 @@ package entity;
 
 /**
  *
- * @author DEll
+ * @author nam
  */
 public class Score {
     private int scid;
